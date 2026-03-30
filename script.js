@@ -8,7 +8,7 @@ let players = [
         unit: "Không có",
         jobTitle: "Bí Thư Quân Uỷ Trung Ương",
         rank: "Không có"
-    }
+    },
         id: 2,
         name: "Toandz999998",
         profileLink: "https://www.roblox.com/vi/users/6020523570/profile",
