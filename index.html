@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VROR Wiki - wikivror.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="logo">VROR Wiki</div>
+        <div class="auth-buttons">
+            <button id="addWikiBtn" class="admin-only hidden">Thêm Wiki</button>
+            <button id="loginBtn">Đăng nhập / Đăng ký</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="wiki-list" id="wikiList">
+            </section>
+    </main>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content auth-form">
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'loginTab')">ĐĂNG NHẬP</button>
+                <button class="tab-link" onclick="openTab(event, 'registerTab')">ĐĂNG KÝ</button>
+            </div>
+            <div id="loginTab" class="tab-content active">
+                <form id="loginForm">
+                    <input type="text" id="loginUser" placeholder="Tên đăng nhập" required>
+                    <input type="password" id="loginPass" placeholder="Mật khẩu" required>
+                    <button type="submit">ĐĂNG NHẬP</button>
+                </form>
+            </div>
+            <div id="registerTab" class="tab-content">
+                <form id="registerForm">
+                    <input type="text" placeholder="Tên đăng nhập" required>
+                    <input type="email" placeholder="Gmail" required>
+                    <input type="password" placeholder="Mật khẩu" required>
+                    <input type="password" placeholder="Nhập lại mật khẩu" required>
+                    <button type="submit">ĐĂNG KÝ</button>
+                </form>
+            </div>
+            <span class="close" id="closeAuth">&times;</span>
+        </div>
+    </div>
+
+    <div id="addWikiModal" class="modal">
+        <div class="modal-content">
+            <h2>Thêm Người Chơi Vào Wiki</h2>
+            <form id="addWikiForm">
+                <input type="text" id="playerName" placeholder="Tên người chơi" required>
+                <input type="url" id="profileLink" placeholder="Link profile người chơi (để liên kết wiki)" required>
+                <input type="url" id="avatarLink" placeholder="Link ảnh đại diện (avatar)" required>
+                <input type="text" id="unit" placeholder="Đơn vị (giả định)" required>
+                <select id="jobTitle" required>
+                    <option value="" disabled selected>Chọn chức vụ</option>
+                    <option value="Phó tư lệnh">Phó tư lệnh</option>
+                    <option value="Tư lệnh">Tư lệnh</option>
+                    <option value="Hicom">Hicom</option>
+                    <option value="Thanh tra Bộ Quốc Phòng">Thanh tra Bộ Quốc Phòng</option>
+                    <option value="BTQUTW">BTQUTW</option>
+                    <option value="PBTQUTW">PBTQUTW</option>
+                    <option value="TBT">TBT</option>
+                    <option value="BTBQP">BTBQP</option>
+                    <option value="TTBQP">TTBQP</option>
+                    <option value="Trưởng ban thanh tra bộ quốc phòng">Trưởng ban thanh tra bộ quốc phòng</option>
+                    <option value="Phó trưởng ban thanh tra bqp">Phó trưởng ban thanh tra bqp</option>
+                </select>
+                <select id="rank" required>
+                    <option value="" disabled selected>Chọn cấp hàm</option>
+                    <option value="Binh nhì">Binh nhì</option>
+                    <option value="Binh nhất">Binh nhất</option>
+                    <option value="Hạ sĩ">Hạ sĩ</option>
+                    <option value="Trung sĩ">Trung sĩ</option>
+                    <option value="Thượng sĩ">Thượng sĩ</option>
+                    <option value="Thiếu úy">Thiếu úy</option>
+                    <option value="Trung úy">Trung úy</option>
+                    <option value="Thượng úy">Thượng úy</option>
+                    <option value="Đại úy">Đại úy</option>
+                    <option value="Thiếu tá">Thiếu tá</option>
+                    <option value="Trung tá">Trung tá</option>
+                    <option value="Thượng tá">Thượng tá</option>
+                    <option value="Đại tá">Đại tá</option>
+                    <option value="Thiếu tướng">Thiếu tướng</option>
+                    <option value="Trung tướng">Trung tướng</option>
+                    <option value="Thượng tướng">Thượng tướng</option>
+                    <option value="Đại Tướng">Đại Tướng</option>
+                </select>
+                <div class="form-buttons">
+                    <button type="submit">Xác nhận</button>
+                    <button type="button" class="cancel" id="cancelAddWiki">Hủy bỏ</button>
+                </div>
+            </form>
+            <span class="close" id="closeAddWiki">&times;</span>
+        </div>
+    </div>
+
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content">
+            <p id="deleteConfirmText">Bạn có chắc muốn xóa người chơi này khỏi wiki không?</p>
+            <div class="form-buttons">
+                <button type="button" id="confirmDelete">Xác nhận</button>
+                <button type="button" class="cancel" id="cancelDelete">Hủy bỏ</button>
+            </div>
+            <span class="close" id="closeDelete">&times;</span>
+        </div>
+    </div>
+
+    <div id="playerDetailModal" class="modal">
+        <div class="modal-content player-detail">
+            <div class="player-detail-header">
+                <img id="detailAvatar" src="" alt="Avatar">
+                <h2 id="detailName">Tên người chơi</h2>
+            </div>
+            <div class="player-detail-body">
+                <p><strong>Link profile:</strong> <a id="detailLink" href="#" target="_blank">Xem trên Wiki</a></p>
+                <p><strong>Đơn vị:</strong> <span id="detailUnit">Đơn vị</span></p>
+                <p><strong>Chức vụ:</strong> <span id="detailJob">Chức vụ</span></p>
+                <p><strong>Cấp hàm:</strong> <span id="detailRank">Cấp hàm</span></p>
+            </div>
+            <span class="close" id="closeDetail">&times;</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
