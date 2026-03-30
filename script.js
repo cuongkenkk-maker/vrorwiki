@@ -8,14 +8,29 @@ let players = [
         unit: "Không có",
         jobTitle: "Bí Thư Quân Uỷ Trung Ương",
         rank: "Không có"
-    },
-    {
+    }
         id: 2,
         name: "Toandz999998",
         profileLink: "https://www.roblox.com/vi/users/6020523570/profile",
         avatarLink: "https://cdn.discordapp.com/attachments/1487818608766619850/1488029638729924698/IMG_0520.png?ex=69cb4b18&is=69c9f998&hm=d4bc5acb63d3236d6ba2360d8dc3cf529bbafe94db0ed1868dcd8092ea549321&",
         unit: "Không có",
         jobTitle: "Tổng Bí Thư",
+        rank: "Không có"
+    },
+        id: 3,
+        name: "purif2kz"
+        profileLink: "https://www.roblox.com/vi/users/7519489407/profile?friendshipSourceType=PlayerSearch",
+        avatarLink: "https://www.roblox.com/headshot-thumbnail/image?userId=7519489407&width=420&height=420&format=png",
+        unit: "Không có",
+        jobTitle: "Thứ Trưởng Bộ Quốc Phòng",
+        rank: "Trung Tướng"
+    },
+        id: 4,
+        name: "tommybuii"
+        profileLink: "https://www.roblox.com/vi/users/7451716009/profile?friendshipSourceType=PlayerSearch",
+        avatarLink: "https://www.roblox.com/headshot-thumbnail/image?userId=7451716009&width=420&height=420&format=png",
+        unit: "Không có",
+        jobTitle: "Owner",
         rank: "Không có"
     }
 ];
