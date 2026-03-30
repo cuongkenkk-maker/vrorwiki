@@ -2,21 +2,21 @@
 let players = [
     {
         id: 1,
-        name: "Kenneku (Admin)",
-        profileLink: "https://game.com/kenneku",
-        avatarLink: "https://via.placeholder.com/100",
-        unit: "BTQUTW",
-        jobTitle: "Tư lệnh",
-        rank: "Đại Tướng"
+        name: "nhyoopyy",
+        profileLink: "https://www.roblox.com/vi/users/3557373065/profile",
+        avatarLink: "https://cdn.discordapp.com/attachments/1473278836987924480/1482265107781259356/IMG_0282.png?ex=69cac1b4&is=69c97034&hm=d26425012d54c3cbc0ea5f945304843bf99e270adeb899862a16341cfe524867&",
+        unit: "Không có",
+        jobTitle: "Bí Thư Quân Uỷ Trung Ương",
+        rank: "Không có"
     },
     {
         id: 2,
-        name: "PlayerTwo",
-        profileLink: "https://game.com/playertwo",
-        avatarLink: "https://via.placeholder.com/100/3f51b5/ffffff",
-        unit: "Hicom",
-        jobTitle: "Hicom",
-        rank: "Trung tướng"
+        name: "Toandz999998",
+        profileLink: "https://www.roblox.com/vi/users/6020523570/profile",
+        avatarLink: "https://cdn.discordapp.com/attachments/1487818608766619850/1488029638729924698/IMG_0520.png?ex=69cb4b18&is=69c9f998&hm=d4bc5acb63d3236d6ba2360d8dc3cf529bbafe94db0ed1868dcd8092ea549321&",
+        unit: "Không có",
+        jobTitle: "Tổng Bí Thư",
+        rank: "Không có"
     }
 ];
 
@@ -91,7 +91,7 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
 // Logic Đăng ký (chỉ giả định)
 document.getElementById("registerForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Đăng ký thành công! (Chỉ là demo, không có lưu trữ thực)");
+    alert("Chức năng này chỉ dành cho Admin web.");
     closeModal(authModal);
 });
 
