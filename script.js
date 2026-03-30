@@ -20,7 +20,7 @@ let players = [
         id: 3,
         name: "purif2kz"
         profileLink: "https://www.roblox.com/vi/users/7519489407/profile?friendshipSourceType=PlayerSearch",
-        avatarLink: "https://www.roblox.com/headshot-thumbnail/image?userId=7519489407&width=420&height=420&format=png",
+        avatarLink: "https://cdn.discordapp.com/attachments/1487818608766619850/1488043915046158458/IMG_0523.png?ex=69cb5863&is=69ca06e3&hm=75dbc527a0b48359d99ef6e2184fcaf686d95efc607b3a53039820129f73b569&",
         unit: "Không có",
         jobTitle: "Thứ Trưởng Bộ Quốc Phòng",
         rank: "Trung Tướng"
@@ -28,7 +28,7 @@ let players = [
         id: 4,
         name: "tommybuii"
         profileLink: "https://www.roblox.com/vi/users/7451716009/profile?friendshipSourceType=PlayerSearch",
-        avatarLink: "https://www.roblox.com/headshot-thumbnail/image?userId=7451716009&width=420&height=420&format=png",
+        avatarLink: "https://cdn.discordapp.com/attachments/1487818608766619850/1488043914584658021/IMG_0522.png?ex=69cb5863&is=69ca06e3&hm=7c64ef87e7196c76b26aeceb45a1812f5e68f06c783d5c03d7ffa5140b3a3ab8&",
         unit: "Không có",
         jobTitle: "Owner",
         rank: "Không có"
